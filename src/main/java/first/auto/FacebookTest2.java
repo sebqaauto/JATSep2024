@@ -1,10 +1,14 @@
 package first.auto;
+import java.time.Duration;
+import java.util.List;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FacebookTest2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
+		
 		// Launch the browser
 		WebDriver driver = new FirefoxDriver();
 		
@@ -17,7 +21,7 @@ public class FacebookTest2 {
 		//Maximize the browser window
 		driver.manage().window().maximize();
 		
-		// Get the title and url of the current window 
+		// Get the title and url of the current window using the Browser methods
 		String title = driver.getTitle();
 		fbpageInfo[0] = driver.getTitle();
 		String url = driver.getCurrentUrl();
@@ -33,6 +37,8 @@ public class FacebookTest2 {
 		//driver.navigate().forward();
 
 		// Use WebElement methods to interact on the web elements of the page
+		//List<WebElement> cookie = driver.findElements(By.xpath("//div[@tabindex='0']//span[contains(text(),'Allow all cookies')]"));
+		Thread.sleep(Duration.ofSeconds(5));
 		driver.findElement(By.xpath("//div[@tabindex='0']//span[contains(text(),'Allow all cookies')]")).click();
 		WebElement createNewButton = driver.findElement(By.linkText("Create new account"));
 		System.out.println(createNewButton);
@@ -79,8 +85,14 @@ public class FacebookTest2 {
 		// To get the location of an web element on the page in terms of co-ordinates use getLocation method
 		Point coordinates = maleRadionButton.getLocation();
 		System.out.println(coordinates.getX()+"   "+coordinates.getY());
+		
+		// To get the dimension of a Web element use getSize method
 		Dimension dimension = driver.findElement(By.name("websubmit")).getSize();
 		System.out.println(dimension.getHeight()+ " "+ dimension.getWidth());
+		
+		String headingText1= driver.findElement(By.xpath("//*[text()='Create a new account']")).getText();
+		String headingText2 = driver.findElement(By.xpath("//*[contains(text(),'Create a new ')]")).getText();
+		System.out.println(headingText1+ "    "+headingText2);
 	}
 
 }
