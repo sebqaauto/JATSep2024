@@ -1,4 +1,4 @@
-package test;
+package first.auto;
 
 import java.util.Scanner;
 import org.openqa.selenium.*;

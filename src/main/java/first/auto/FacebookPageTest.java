@@ -1,4 +1,4 @@
-package test;
+package first.auto;
 import java.util.List;
 //java.lang
 import org.openqa.selenium.*;
