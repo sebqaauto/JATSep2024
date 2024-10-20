@@ -78,6 +78,7 @@ public class FacebookTest2 {
 		String buttonColor= driver.findElement(By.name("websubmit")).getCssValue("background-color");
 		System.out.println(buttonColor);
 		
+		
 		// To check/get the value of Dom attributes use getAttribute method
 		String hrefValue= driver.findElement(By.linkText("Already have an account?")).getAttribute("href");
 		System.out.println(hrefValue);
