@@ -24,7 +24,8 @@ public class AmazonTest1 {
 		driver.findElement(By.cssSelector("#nav-search-submit-button")).click();
 		boolean firstWideSerachresultArea = driver.findElement(By.xpath("//div[@data-cel-widget='search_result_1']")).isDisplayed();
 		driver.findElement(By.xpath("//div[@data-cel-widget='search_result_1']")).click();
-		driver.findElement(By.xpath("//div[@data-cel-widget='search_result_1']//div[contains(@class,'puis-list-col-left')]")).click();
+		//driver.findElement(By.xpath("//div[@data-cel-widget='search_result_1']//div[contains(@class,'puis-list-col-left')]")).click();
+		driver.findElement(By.xpath("//div[@data-index='3']//div[contains(@class,'puis-list-col-left')]")).click();
 		System.out.println(firstWideSerachresultArea);
 	}
 

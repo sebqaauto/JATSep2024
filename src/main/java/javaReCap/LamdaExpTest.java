@@ -42,7 +42,7 @@ public class LamdaExpTest {
 			});
 		
 	System.out.println(Calculator.ramSize);
-	//Calculator.ramSize = 12; - re assigning is not possible 
+	//Calculator.ramSize = 12; //- re assigning is not possible 
 
 }
 }
