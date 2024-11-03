@@ -17,7 +17,7 @@ public class MouseActionsTest1 {
 		String ipad = "iPad";
 		
 		public void launchApp() {
-			driver.get("https://www.apple.com/iphone/");
+			driver.get("https://www.apple.com/");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			System.out.println("This a sample text "+mac+" - continues ");
@@ -31,13 +31,15 @@ public class MouseActionsTest1 {
 			WebElement secondBuy = driver.findElement(By.xpath("//div[@data-unit-id='iphone-16-pro']//a[text()='Buy']"));
 			WebElement footer = driver.findElement(By.id("ac-globalfooter"));
 			WebElement iphoneSection = driver.findElement(By.xpath("//div[@data-unit-id='iphone-16']"));
-			WebElement textSection = driver.findElement(By.xpath("//h2[text()='Get to know iPhone.']"));
+			//WebElement textSection = driver.findElement(By.xpath("//h2[text()='Get to know iPhone.']"));
 			Actions action = new Actions(driver);
 			
 			// movetoElement is used to move to an element or hover over in the current view port 
 			action.moveToElement(macElement).build().perform();
 			Thread.sleep(Duration.ofSeconds(5));
-			action.moveToElement(iPadElement).click().build().perform();
+			//action.moveToElement(iPadElement).click().build().perform();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView(true);", secondBuy);
 		
 			
 		}
