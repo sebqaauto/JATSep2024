@@ -22,7 +22,7 @@ public class AlertHandlingTest {
 	
 	public void addressSimpleAlert() throws InterruptedException {
 		driver.findElement(By.id("alertButton")).click();
-		//When an alert happen - should address it 
+		//When an alert happen - should address it - First switch to the Alert driver.
 		Thread.sleep(4000);
 		System.out.println("From Simple Alert "+driver.switchTo().alert().getText());
 		driver.switchTo().alert().accept();
@@ -30,7 +30,7 @@ public class AlertHandlingTest {
 	
 	public void addressConfirmAlert() throws InterruptedException {
 		WebElement element = driver.findElement(By.id("confirmButton"));
-		// JavaScriptExecutor will execute the commands in terms of Javascript, it is native to the browser and will works well.
+		// JavaScriptExecutor will execute the commands in terms of Javascript, it is native to the browser and works well.
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 		Thread.sleep(4000);

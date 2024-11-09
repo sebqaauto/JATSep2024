@@ -22,7 +22,7 @@ public class KeyboardTest1 {
 		WebElement emailElement = driver.findElement(By.id("email"));
 		WebElement loginButton = driver.findElement(By.name("login"));
 		
-		//Using actions class mouse event we are moving to the element and performing a click 
+		//Using Actions class mouse event we are moving to the element and performing a click 
 		action.moveToElement(emailElement).click();
 		
 		//Keys is an Enum which consists of all keyboard keys
