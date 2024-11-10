@@ -6,6 +6,9 @@ import java.util.List;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MouseActionsDragAndDrop {
 	
@@ -44,7 +47,6 @@ public class MouseActionsDragAndDrop {
 		System.out.println("The time it waited to find the cookie element is  "+(startingTime - endingTime));
 		System.out.println("Inside the cookie block the size of the list is " + cookie.size());
 		if(cookie.size()>0) {
-			System.out.println("Inside the cookie block > If Condition ");
 			cookie.get(0).click();
 		}
 	}
