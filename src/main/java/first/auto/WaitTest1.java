@@ -18,7 +18,7 @@ public class WaitTest1 {
 	
 	public void launchApp() {
 		startTime = System.currentTimeMillis(); // 1000 ms is 1 second 
-		driver.get(baseUrl); // Page Load is complete 
+		driver.get(baseUrl); // Page Load is complete - 300 seconds 
 		endTime = System.currentTimeMillis();
 		System.out.println("The time taken for the page to load "+ (endTime - startTime) + " ms");
 		driver.manage().window().maximize();
@@ -28,7 +28,7 @@ public class WaitTest1 {
 	
 	public void textBoxInteraction_1() {
 		startTime = System.currentTimeMillis();
-		driver.findElement(By.id("btn1")).click();
+		driver.findElement(By.id("btn1")).click(); // By default findElement() will wait for 0ms;
 		endTime = System.currentTimeMillis();
 		System.out.println("The time taken for the findElement method to find is button -- "+ (endTime - startTime) + " ms");
 		startTime = System.currentTimeMillis();

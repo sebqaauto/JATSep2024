@@ -102,8 +102,6 @@ public class AmazonMultipleTabsTest {
 		amz.openNewTab();
 		amz.getAllWindowHandles();
 		amz.goToSecondWindow();
-		
-		
 	}
 
 }

@@ -1,5 +1,6 @@
 package javaReCap;
 
+// Object is the topmost class or the default class extended by every class
 public class StringComparsion {
 	
 	int rollNo = 10; //primitive - rollNo is not an Object 
@@ -31,6 +32,7 @@ public class StringComparsion {
 		// TODO Auto-generated method stub
 		StringComparsion obj = new StringComparsion();
 		obj.compareStrings();
+	
 	}
 
 }
